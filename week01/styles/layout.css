@@ -20,6 +20,7 @@ header {
     color: #ffff;
     padding: 2rem;
     grid-column: 1 / 4;
+    font-size: small;
     text-align: center;/*poner el texto en el centro */
 }
 
@@ -41,7 +42,7 @@ header {
 
 nav li{
     display: inline;
-    margin: 0 70px;
+    margin: 0 130px;
     
  
 }
