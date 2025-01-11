@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.layout-container {
+    display: grid;
+    grid-template: auto 50px 1fr auto / 300px 1fr auto;
+    height: 100vh; /*esto hace que el lay out tome toda la pagina 
+    y no quede a mitad*/
+}
+
+header {
+    background: #fe5f00;
+    color: #ffffff;
+    padding: 2rem;
+    grid-column: 1 / 4;
+    font-size: small;
+    text-align: center;/*poner el texto en el centro */
+}
+
+.nav {
+    background: #322f20;
+    color: #ffff;
+    padding: 1rem;
+    margin: 0;
+    grid-column: 1/4;
+
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex; /* Usamos flexbox para alinear los elementos en una fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 0;
+  }
+
+nav li{
+    display: inline;
+    margin: 0 50px;
+    
+ 
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    grid-column: 1/4;
+}
+
+.card {
+    background: rgb(248, 244, 244);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 50%;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    background-color: #333;
+    margin: 0;
+    padding: 0.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    
+}
+
+
+
+footer {
+    background: #080705;
+    color: #fff;;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+
+.right-sidebar {
+    padding: 1rem;
+}
