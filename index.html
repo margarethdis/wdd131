@@ -4,59 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131 PORTAL</title>
+    <title>WDD131 - Dynamic Web Fundamentals - Margareth D. Ramos</title>
     <link rel="stylesheet" href="styles/base.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="layout-container">
         <header>
-            <h1>WDD 131 DYNAMIC WEB FUNDAMENTALS - Margareth D. Ramos </h1>
+            <h1>WDD 131 Dynamic Web Fundamentals - Margareth D. Ramos</h1>
         </header>
+
         <div class="nav">
             <nav>
                 <ul>
                     <li><a href="#">LinkedIn</a></li>
-                    <li><a href=" https://byupw.instructure.com/">Canvas</a></li>
-                    <li><a
-                            href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng#p27">Scriptures</a>
-                    </li>
+                    <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng#p27">Scriptures</a></li>
                     <li><a href="#">Final Project</a></li>
                 </ul>
             </nav>
         </div>
+
         <main>
-            <!-- First Card -->
-            <section class="card">
-                <h2>About me</h2>
-                <img src="images/profile.jpg" alt="Image for Card 1">
-                <p>
-                    My name is Margareth, and I was born in Honduras. 
-                    I live with my family in La Ceiba. I am currently working as a customer service advocate for an insurance company in the USA. I love playing the piano and enjoy learning new things, such as languages. 
-                    I am currently learning French and Korean.
-                </p>
-            </section>
-            <!-- Second Card -->
-            <section class="card">
-                <h2>Web Dev Resources</h2>
-            
-                <p>
-                    This is some content for the second card. It describes the purpose or details related to the card.
-                </p>
-            </section>
+            <!-- Cards Section -->
+            <div class="cards-container">
+                <!-- Card 1: About Me & La Ceiba -->
+                <section class="card">
+                    <h2>About Me</h2>
+                    <div class="card-section">
+                        <div class="card-content">
+                            
+                            <p>
+                                My name is Margareth, and I was born in Honduras. I live with my family in La Ceiba. I am currently working as a customer service advocate for an insurance company in the USA. I love playing the piano and enjoy learning new things, such as languages. I am currently learning French and Korean.
+                            </p>
+                            <img src="images/profile.jpg" alt="Profile image of Margareth">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-section">
+                        <img src="images/flaghn.jpg" alt="Honduras flag">
+                        <p>
+                            La Ceiba is a vibrant city located on the northern coast of Honduras, known as the gateway to the Bay Islands. It is famous for its annual carnival, its proximity to Pico Bonito National Park, and beautiful beaches. The city is also a hub for eco-tourism, offering activities such as rafting, hiking, and exploring the Cangrejal River.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Card 2: Web Dev Resources -->
+                <section class="card">
+                    <h2>Web Dev Resources</h2>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                        <li><a href="https://freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+                        <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+                    </ul>
+                </section>
+            </div>
         </main>
-            </section>
-        </aside>
+
         <footer>
-            <p>
-                &copy; <span id="currentyear"></span> Margareth Ramos,La Ceiba , Honduras
-            </p>
+            <p>&copy; <span id="currentyear"></span> Margareth Ramos, La Ceiba, Honduras</p>
             <p id="lastModified"></p>
         </footer>
-        <script src="scripts/getdates.js"></script>
     </div>
 
+    <script src="scripts/getdates.js"></script>
 </body>
 
 </html>
