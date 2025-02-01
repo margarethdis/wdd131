@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -13,38 +14,89 @@ header {
     margin: 1rem auto;
     padding: 1rem;
     background-color: #e6f2ff;
-    display: flex; /* Usamos Flexbox para alinear los elementos horizontalmente */
-    justify-content: space-between; /* Espaciado entre el título y el menú */
-    align-items: center; /* Alineamos verticalmente los elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-    font-size: 1.8rem; /* Tamaño de la fuente para el título */
+    font-size: 1.8rem;
 }
 
 nav {
-    /* No necesitamos mucho aquí, solo nos aseguramos de que el nav esté alineado */
+    position: relative; /* Necesario para posicionar el menú */
 }
 
 nav ul {
-    list-style: none; /* Quitamos los puntos de la lista */
-    display: flex; /* Usamos Flexbox para que los elementos del menú estén en línea */
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* El menú es vertical por defecto */
+    background-color: #e6f2ff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: none; /* Ocultamos el menú inicialmente */
 }
 
 nav ul li {
-    margin-left: 1rem; /* Espaciado entre los elementos del menú */
+    margin: 1rem 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #333;
     font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    color: #007bff; /* Cambiar color del enlace al pasar el mouse */
+/* Icono del menú hamburguesa */
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
+/* Mostrar el menú cuando esté activo */
+nav ul.menu-active {
+    display: block; /* Mostrar el menú */
+    position: absolute; /* Aseguramos que el menú se posicione correctamente */
+    top: 60px; /* Distancia desde la parte superior */
+    left: 0;
+    right: 0; /* Asegura que el menú ocupe todo el ancho */
+    width: 100%;
+    background-color: #e6f2ff;
+    text-align: center;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Estilos para centrar el texto del menú */
+nav ul.menu-active li {
+    margin: 1rem 0;
+    width: 100%; /* Asegura que cada ítem ocupe todo el ancho */
+}
+
+/* Estilos para el menú en pantallas grandes */
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: flex; /* Menú horizontal por defecto en pantallas grandes */
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+    
+    nav ul li {
+        margin: 0 1rem; /* Espaciado horizontal */
+    }
+
+    .hamburger {
+        display: none; /* Ocultar el icono de la hamburguesa en pantallas grandes */
+    }
+}
+
+/* Estilos para el contenido principal */
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -57,32 +109,26 @@ main {
 }
 
 main h2 {
-    text-align: center; /* Centra el texto horizontalmente */
-    font-size: 2rem; /* Tamaño de fuente del título */
-    margin-bottom: 1rem; /* Espacio entre el título y las imágenes */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 section {
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
     background-color: #fff;
 }
 
-section {
-    padding: 1rem;
-    background-color: #e6f2ff;
-    display: grid; /* Usamos Grid para el layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
-    grid-gap: 1rem; /* Espacio entre las imágenes */
-}
-
 figure {
-    margin: 0; /* Eliminar márgenes de los elementos figure */
+    margin: 0;
 }
 
 img {
-    width: 100%; /* Las imágenes ocupan todo el ancho del contenedor de cada celda */
-    height: auto; /* Mantener la relación de aspecto de las imágenes */
-    border-radius: 8px; /* Esquinas redondeadas, opcional */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 figcaption {
@@ -90,13 +136,14 @@ figcaption {
     padding: 0.5rem;
     font-size: 1rem;
     color: #333;
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente */
-    border-radius: 0 0 8px 8px; /* Bordes redondeados solo en la parte inferior */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
 }
 
+/* Footer Styles */
 footer {
-    background: #080705; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
+    background: #080705;
+    color: #fff;
     padding: 2rem;
     text-align: center;
 }

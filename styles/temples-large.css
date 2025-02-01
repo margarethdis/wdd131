@@ -4,6 +4,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #fdfdfd;
+        padding: 1rem;
     }
 
     nav ul {
@@ -23,8 +25,17 @@
 
     nav ul li a {
         text-decoration: none;
-        color: #ffffff;
+        color: #020202;
         font-size: 1.1rem;
+        padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+        display: inline-block;
+        transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    }
+
+    /* Efecto hover en el menú */
+    nav ul li a:hover {
+        color: #007bff;  /* Cambia el color al pasar el mouse */
+        transform: scale(1.1);  /* Aumenta el tamaño ligeramente */
     }
 
     .hamburger {
@@ -36,7 +47,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* 3 columnas */
         grid-gap: 1rem;
-        background-color: #e6f2ff;
+        background-color: #ffffff;
     }
 
     figure {
