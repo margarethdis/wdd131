@@ -1,4 +1,4 @@
-// Obtener la fecha actual y la fecha de la última modificación del documento
+
 const currentYear = new Date().getFullYear();
 const lastModified = document.lastModified;
 
