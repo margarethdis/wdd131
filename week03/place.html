@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkey</title>
+    <link rel="stylesheet" href="styles/place.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1> Turkey</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <img src="images/bosforo.jpg" alt="Beautiful view of Bosphorus, Turkey">
+            </picture>
+            <div class="cards-container">
+                <div class="card weather-card">
+                    <h2>Weather <span class="weather-icon">⛅</span></h2>
+                    <p>Temperature: <span id="temperature">10&#8451;</span></p>
+                    <p>Wind Speed: <span id="wind-speed">5 km/h</span></p>
+                    <p>Wind Chill: <span id="wind-chill">Calculating...</span></p>
+                </div>
+                <div class="card data-card">
+                    <h2>Country Information</h2>
+                    <ul>
+                        <li>Capital: Ankara</li>
+                        <li>Area: 783,562 km<sup>2</sup></li>
+                        <li>Population: 85 million</li>
+                        <li>Official Language: Turkish</li>
+                        <li>Currency: Turkish Lira (TRY)</li>
+                    </ul>
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Margareth Daniela Ramos, La Ceiba Honduras</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = lastModified;
+    </script>
+    
+    
+
+
+
+</body>
+
+</html>

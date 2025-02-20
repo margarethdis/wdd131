@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* Reset de márgenes y paddings */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #8B0000; /* Rojo quemado */
+    color: #ffffff; /* Letras blancas */
+    text-align: center; /* Centrar el texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    margin: 0; /* Eliminar el margen del encabezado */
+    font-family: Arial, sans-serif; /* Fuente limpia y legible */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* La imagen cubrirá toda la pantalla */
+    overflow: hidden;
+}
+
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsión */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Contenedor para las tarjetas */
+.cards-container {
+    position: relative; /* Necesario para posicionar las tarjetas dentro del contenedor */
+    display: flex;
+    justify-content: center; /* Centra las tarjetas de manera predeterminada */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 80px; /* Despegar las tarjetas del header */
+}
+
+/* Tarjetas */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+}
+
+.weather-card h2, .data-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Ajustes en Desktop para posicionar tarjetas en las esquinas */
+@media (min-width: 1024px) {
+    .cards-container {
+        position: relative; /* Hace que las tarjetas se posicionen con respecto a este contenedor */
+        margin-top: 125px; /* Aumentar el espacio desde el header en pantallas grandes */
+    }
+
+    .weather-card {
+        position: absolute;
+        top: 10px; /* Esquina superior izquierda */
+        left: 10px;
+    }
+
+    .data-card {
+        position: absolute;
+        bottom: 10px; /* Esquina inferior derecha */
+        right: 10px;
+    }
+}
+
+/* Estilos de Footer */
+footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
