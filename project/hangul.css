@@ -1,0 +1,264 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero Section (Background and Title) */
+.hero {
+    background-image: url('images/hangul-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+}
+
+/* How Does Hangul Work Section */
+.hangul-working {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hangul-working h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.hangul-working p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Cards for Consonants and Vowels */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* How is Hangul Writing Section */
+.hangul-writing {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hangul-writing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.hangul-writing p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Examples */
+.examples {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.example {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.example h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.example p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Resources Section */
+.resources {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resources h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resource-card {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.resource-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer p span {
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .cards, .examples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .example {
+        width: 80%;
+    }
+
+    .resource-card {
+        width: 80%;
+    }
+}
