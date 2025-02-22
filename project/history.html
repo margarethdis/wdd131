@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Hangul</title>
+    <link rel="stylesheet" href="styles/history.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Learn Hangul Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="hangul.html">Hangul</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-image:url(images/history.jpg);">
+        <!-- Hero image only, no text here -->
+    </section>
+
+    <!-- History of Hangul Section -->
+    <main>
+        <section id="history-of-hangul" class="history-of-hangul">
+            <div class="container">
+                <div class="left">
+                    <h2>Origins of Hangul</h2>
+                    <p>Hangul was created by King Sejong in 1443 to improve literacy among common people. It was designed to be simple and easy to learn, unlike Classical Chinese characters that were difficult for the general population to master.</p>
+                </div>
+                <div class="right">
+                    <img src="images/history3.jpg" alt="King Sejong" class="history-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Evolution of Hangul Section -->
+        <section id="evolution-of-hangul" class="evolution-of-hangul">
+            <div class="container">
+                <div class="left">
+                    <h2>The Evolution of Hangul</h2>
+                    <p>Since its creation, Hangul has gone through several stages of reform and modernization. From its initial form to the standardized version used today, Hangul has continually adapted to meet the needs of the Korean language and its speakers.</p>
+                </div>
+                <div class="right">
+                    <img src="images/manwriting.jpg" alt="Evolution of Hangul" class="history-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Significance Section -->
+        <section id="cultural-significance" class="cultural-significance">
+            <div class="container">
+                <div class="left">
+                    <h2>The Cultural Impact of Hangul</h2>
+                    <p>Hangul is more than just an alphabet; it’s a symbol of Korean identity and pride. It has played a key role in shaping the cultural and linguistic identity of the Korean people, promoting national unity and accessibility to education.</p>
+                </div>
+                <div class="right">
+                    <img src="images/modern.jpeg" alt="Cultural Significance of Hangul" class="history-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="conclusion">
+            <div class="container">
+                <h2>Conclusion</h2>
+                <p>Today, Hangul is one of the most efficient and scientific writing systems in the world. It continues to evolve, keeping pace with technological advancements while preserving its historical significance.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Margareth Daniela Ramos Discua , La Ceiba, Honduras</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = lastModified;
+    </script>
+
+    <div class="row sectionBlockLayout" style="min-height:15px"></div>
+    <script src="scripts/history.js"></script>
+
+</body>
+
+</html>
