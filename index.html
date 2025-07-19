@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Dynamic Web Fundamentals – Margareth Daniela Ramos Discua</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Margareth Ramos | Student portal with links to course resources, projects, and activities.">
-    <meta name="author" content="Margareth Daniela Ramos Discua">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Margareth Daniela Ramos Discua</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Margareth Ramos | Student portal with links to course resources, projects, and activities." />
+  <meta name="author" content="Margareth Daniela Ramos Discua" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <nav class="navigation">Navigation</nav>
-    </header>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav class="navigation">
+      <a href="https://www.linkedin.com">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
 
-    <main class="main-content">Main Content</main>
-    <aside class="right-sidebar">Right Sidebar</aside>
+  <main class="main-content">
+    <section class="card about-me">
+      <h2>About Me</h2>
+      <div class="about-me-content">
+        <img src="images/profile.jpg" alt="My Photo" class="profile-img" />
+        <div>
+          <p>Hello! I'm Margareth from Honduras. I am a web development student passionate about creating elegant and functional websites.</p>
+          <img src="images/flaghn.jpg" alt="Honduran Flag" class="flag-img" />
+        </div>
+      </div>
+    </section>
 
-    <footer class="footer">Footer Content</footer>
+    <section class="card web-resources">
+      <h2>Web Development Resources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+        <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Margareth Daniela Ramos Discua | Honduras</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
 </body>
 
 </html>

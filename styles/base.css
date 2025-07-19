@@ -1,0 +1,84 @@
+/* Base grid layout for body */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: lightblue;
+  padding: 1rem;
+  grid-column: 1 / 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Make course-title a block to center */
+#course-title {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Navigation styles with flex */
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #ddd;
+}
+
+/* Main content styles - two columns */
+.main-content {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Images inside cards */
+.card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: lightgray;
+  padding: 1rem;
+  text-align: center;
+  grid-column: 1 / 2;
+  grid-row: 3;
+  font-size: 0.9rem;
+  color: #333;
+}
