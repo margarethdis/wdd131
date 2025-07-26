@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests..">
+    <meta name="author" content="Margareth Daniela Ramos Discua">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Temples</h1>
+    <nav>
+        <div class="hamburger" id="hamburger">&#9776;</div> <!-- Icono de la hamburguesa -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#old">Old</a></li>
+            <li><a href="#new">New</a></li>
+            <li><a href="#large">Large</a></li>
+            <li><a href="#small">Small</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- MAIN -->
+<main>
+    <h2 id="current-menu">Home</h2> <!-- El heading debe coincidir con el menú actual -->
+    
+    <!-- Lista de figuras con imágenes de templos -->
+    <section>
+        <figure>
+            <img src="images/temple1.png" alt="Temple 1">
+            <figcaption>Temple 1</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple2.png" alt="Temple 2">
+            <figcaption>Temple 2</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple3.png" alt="Temple 3">
+            <figcaption>Temple 3</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple4.png" alt="Temple 4">
+            <figcaption>Temple 4</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple5.png" alt="Temple 5">
+            <figcaption>Temple 5</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple6.png" alt="Temple 6">
+            <figcaption>Temple 6</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple7.png" alt="Temple 7">
+            <figcaption>Temple 7</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple8.png" alt="Temple 8">
+            <figcaption>Temple 8</figcaption>
+        </figure>
+        <figure>
+            <img src="images/temple9.png" alt="Temple 9">
+            <figcaption>Temple 9</figcaption>
+        </figure>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; <span id="currentyear"></span> Margareth Ramos, La Ceiba, Honduras</p>
+    <p id="lastModified"></p>
+</footer>
+
+<script src="scripts/temples.js"></script>
+</body>
+</html>

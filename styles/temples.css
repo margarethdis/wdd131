@@ -1,0 +1,149 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #e6f2ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav {
+    position: relative; /* Necesario para posicionar el menú */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* El menú es vertical por defecto */
+    background-color: #e6f2ff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: none; /* Ocultamos el menú inicialmente */
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Icono del menú hamburguesa */
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mostrar el menú cuando esté activo */
+nav ul.menu-active {
+    display: block; /* Mostrar el menú */
+    position: absolute; /* Aseguramos que el menú se posicione correctamente */
+    top: 60px; /* Distancia desde la parte superior */
+    left: 0;
+    right: 0; /* Asegura que el menú ocupe todo el ancho */
+    width: 100%;
+    background-color: #e6f2ff;
+    text-align: center;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Estilos para centrar el texto del menú */
+nav ul.menu-active li {
+    margin: 1rem 0;
+    width: 100%; /* Asegura que cada ítem ocupe todo el ancho */
+}
+
+/* Estilos para el menú en pantallas grandes */
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: flex; /* Menú horizontal por defecto en pantallas grandes */
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+    
+    nav ul li {
+        margin: 0 1rem; /* Espaciado horizontal */
+    }
+
+    .hamburger {
+        display: none; /* Ocultar el icono de la hamburguesa en pantallas grandes */
+    }
+}
+
+/* Estilos para el contenido principal */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    background-color: #fff;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+}
+
+/* Footer Styles */
+footer {
+    background: #080705;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}

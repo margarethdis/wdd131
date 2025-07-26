@@ -1,0 +1,80 @@
+
+/* Estilos generales */
+@media screen and (min-width: 601px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fdfdfd;
+        padding: 1rem;
+    }
+
+    nav ul {
+        display: flex;  /* El menú se convierte en horizontal */
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        background-color: transparent;
+        position: static;  /* El menú ya no será absoluto */
+        text-align: left;  /* Alineamos el menú a la izquierda */
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-left: 1rem; /* Espaciado entre los elementos del menú */
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #020202;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+        display: inline-block;
+        transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    }
+
+    /* Efecto hover en el menú */
+    nav ul li a:hover {
+        color: #007bff;  /* Cambia el color al pasar el mouse */
+        transform: scale(1.1);  /* Aumenta el tamaño ligeramente */
+    }
+
+    .hamburger {
+        display: none; /* Ocultamos el ícono de la hamburguesa en pantallas grandes */
+    }
+
+    /* Diseño en cuadrícula para las imágenes */
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-gap: 1rem;
+        background-color: #ffffff;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        width: 100%; /* Asegura que las imágenes mantengan el ancho adecuado */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    figcaption {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1rem;
+        color: #333;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 8px 8px;
+    }
+
+    /* Footer Styles */
+    footer {
+        background: #080705;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+    }
+}
