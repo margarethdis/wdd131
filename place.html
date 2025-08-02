@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>South Korea - Seoul City</title>
+  <meta name="description" content="A webpage about South Korea" />
+  <meta name="keywords" content="South Korea, Seoul, travel" />
+  <meta name="author" content="Margaret Ramos" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
-    
+  <header>
+    <h1>South Korea - Seoul City</h1>
+  </header>
+  <main class="container">
+    <section class="hero-section">
+      <picture class="hero">
+        <img src="images/seul.jpg" alt="View of Seoul, South Korea" />
+      </picture>
+    </section>
+
+    <section class="data">
+      <h2 class="box-title">Data</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td class="label"><b>Area:</b></td>
+            <td>100,210 km²</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Population:</b></td>
+            <td>51,780,000</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Capital:</b></td>
+            <td>Seoul</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Languages:</b></td>
+            <td>Korean</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Currency:</b></td>
+            <td>South Korean won (KRW)</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Time Zone:</b></td>
+            <td>Korea Standard Time (KST)</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Calling Code:</b></td>
+            <td>82</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Internet TLD:</b></td>
+            <td>.kr</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="weather">
+      <h2 class="box-title">
+        Weather <span class="weather-icon">&#9925;</span>
+      </h2>
+      <img src="images/weather-icon.svg" alt="Weather icon: partly cloudy" />
+      <table>
+        <tbody>
+          <tr>
+            <td class="label"><b>Temperature:</b></td>
+            <td>28 °C</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Conditions:</b></td>
+            <td>Partly Cloudy</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Wind:</b></td>
+            <td>NW 10 km/h</td>
+          </tr>
+          <tr>
+            <td class="label"><b>Wind Chill:</b></td>
+            <td>25 °C</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;<span id="currentyear">year</span> - Margaret Ramos - Honduras</p>
+    <p id="lastModified">Last modified: </p>
+  </footer>
 </body>
+
 </html>
