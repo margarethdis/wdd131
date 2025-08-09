@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -8,58 +8,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    
+    line-height: 1.6;
 }
 
-.temple-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    width: 300px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.temple-card:hover {
-    transform: translateY(-10px);
-}
-
-.temple-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.temple-card h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.temple-card p {
-    margin: 5px 0;
-    color: #555;
-    font-size: 1rem;
-}
-
-.temple-card .temple-info {
-    padding: 10px;
-    background-color: #fafafa;
-}
-
-
-
-
+/* ===== HEADER ===== */
 header {
-    max-width: 640px;
-    margin: 1rem auto;
-    padding: 1rem;
     background-color: #e6f2ff;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,22 +24,21 @@ header h1 {
     font-size: 1.8rem;
 }
 
+/* ===== NAV ===== */
 nav {
-    position: relative; /* Necesario para posicionar el menú */
+    position: relative;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    flex-direction: column; /* El menú es vertical por defecto */
+    flex-direction: column;
     background-color: #e6f2ff;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    padding: 1rem;
     text-align: center;
-    display: none; /* Ocultamos el menú inicialmente */
+    display: none;
 }
 
 nav ul li {
@@ -97,42 +51,22 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-/* Icono del menú hamburguesa */
 .hamburger {
     display: block;
     font-size: 2rem;
     cursor: pointer;
 }
 
-/* Mostrar el menú cuando esté activo */
 nav ul.menu-active {
-    display: block; /* Mostrar el menú */
-    position: absolute; /* Aseguramos que el menú se posicione correctamente */
-    top: 60px; /* Distancia desde la parte superior */
-    left: 0;
-    right: 0; /* Asegura que el menú ocupe todo el ancho */
-    width: 100%;
-    background-color: #e6f2ff;
-    text-align: center;
-    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    display: block;
+    z-index: 1000;
 }
 
-/* Estilos para centrar el texto del menú */
-nav ul.menu-active li {
-    margin: 1rem 0;
-    width: 100%; /* Asegura que cada ítem ocupe todo el ancho */
-}
-
-/* Estilos para el contenido principal */
+/* ===== MAIN ===== */
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    max-width: 640px;
+    max-width: 1200px;
     margin: 1rem auto;
-    border: 1px solid #bbb;
-    padding: 1rem;
-    background-color: #e6f2ff;
+    padding: 0 1rem;
 }
 
 main h2 {
@@ -141,55 +75,77 @@ main h2 {
     margin-bottom: 1rem;
 }
 
-section {
+/* ===== TEMPLE CARDS ===== */
+#temple-cards {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    gap: 1rem;
+}
+
+.temple-card {
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-figure {
-    margin: 0;
+.temple-card:hover {
+    transform: translateY(-5px);
 }
 
-img {
+.temple-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
 }
 
-figcaption {
-    text-align: center;
-    padding: 0.5rem;
+.temple-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.temple-card p {
     font-size: 1rem;
-    color: #333;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 8px 8px;
+    color: #555;
 }
 
-/* Footer Styles */
+/* ===== FOOTER ===== */
 footer {
     background: #080705;
     color: #fff;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
+    margin-top: 2rem;
 }
 
-/* Estilos para el menú en pantallas grandes */
+/* ===== RESPONSIVE ===== */
 @media screen and (min-width: 600px) {
     nav ul {
-        display: flex; /* Menú horizontal por defecto en pantallas grandes */
-        position: relative;
-        top: 0;
-        left: 0;
+        display: flex;
+        position: static;
+        flex-direction: row;
         width: auto;
     }
-    
     nav ul li {
-        margin: 0 1rem; /* Espaciado horizontal */
+        margin: 0 1rem;
     }
-
     .hamburger {
-        display: none; /* Ocultar el icono de la hamburguesa en pantallas grandes */
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #temple-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #temple-cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
