@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples</title>
+    <meta name="description" content="Filtered temple gallery with lazy loading and dynamic display using JavaScript.">
+    <meta name="author" content="Margareth Daniela Ramos Discua">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Temples</h1>
+        <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <h2 id="current-menu">Home</h2>
+        <section id="temple-cards"></section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span> Margareth Ramos, La Ceiba, Honduras</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/temples-filtered.js" defer></script>
+</body>
+</html>

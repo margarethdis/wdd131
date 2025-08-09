@@ -1,0 +1,89 @@
+/* Estilos generales */
+@media screen and (min-width: 601px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;  /* Hacer el header más amplio */
+        margin: 1rem auto;
+        padding: 1rem;
+        background-color: #e6f2ff;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Aumentamos el tamaño de la fuente */
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly; /* Para que los items de la lista estén más espaciados */
+        width: 60%;  /* Limitar el ancho para que no ocupe toda la pantalla */
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #020202;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #007bff;
+        transform: scale(1.1);
+    }
+
+    .hamburger {
+        display: none; /* Ocultamos el ícono de la hamburguesa en pantallas grandes */
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-gap: 2rem; /* Mayor espacio entre las tarjetas */
+        background-color: #ffffff;
+        max-width: 80%;  /* Limitar el ancho máximo */
+        margin: 2rem auto; /* Centrar el contenido */
+    }
+
+    figure {
+        margin: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agregar sombra para un mejor efecto visual */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    figcaption {
+        text-align: center;
+        padding: 1rem; /* Más espacio en el caption */
+        font-size: 1.2rem; /* Aumentar el tamaño de la fuente */
+        color: #333;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 8px 8px;
+    }
+
+    footer {
+        background: #080705;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.1rem; /* Aumentar el tamaño de la fuente en el pie de página */
+        margin-top: 3rem; /* Mayor espacio entre la sección y el footer */
+    }
+
+    footer p {
+        margin: 1rem 0;
+    }
+}
