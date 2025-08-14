@@ -1,0 +1,154 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative; /* Para efectos de hover */
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s; /* Suaviza el hover */
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #ffffff;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/history-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* History of Hangul Section */
+#history-of-hangul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#history-of-hangul .left, 
+#evolution-of-hangul .left, 
+#cultural-significance .left {
+    width: 50%;
+}
+
+#history-of-hangul .right, 
+#evolution-of-hangul .right, 
+#cultural-significance .right {
+    width: 45%;
+}
+
+#history-of-hangul h2, 
+#evolution-of-hangul h2, 
+#cultural-significance h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#history-of-hangul p, 
+#evolution-of-hangul p, 
+#cultural-significance p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.history-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cultural Significance Section */
+.cultural-significance {
+    background-color: #f1f1f1;
+    padding: 60px 20px;
+}
+
+/* Conclusion Section */
+#conclusion {
+    padding: 40px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#conclusion h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#conclusion p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}

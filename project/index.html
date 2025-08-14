@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Hangul</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Learn Hangul Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="hangul.html">Hangul</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image:url(images/history2.jpg);">
+        <div class="hero-text">
+            <h1>Learn Hangul the fun and easy way!</h1>
+            <p>Explore the fascinating structure of Hangul, created by King Sejong in the 15th century.</p>
+            <div class="hero-buttons">
+                <a href="history.html" class="btn">History</a>
+                <a href="hangul.html" class="btn">Learn Hangul</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn Hangul? Section -->
+    <section id="why-learn-hangul" class="why-learn">
+        <div class="container">
+            <div class="left">
+                <img src="images/history2.jpg" alt="Why Learn Hangul">
+            </div>
+            <div class="right">
+                <h2>Why Learn Hangul?</h2>
+                <p>Hangul is a phonetic alphabet that is easy to learn and understand. Whether you’re learning Korean
+                    for travel, work, or just for fun, Hangul will open the door to exploring the language with ease!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Student Testimonials</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <img src="images/usuario1.jpg" alt="Student 1">
+                <p>"Learning Hangul was much easier than I thought! The structure of the alphabet made it so much fun!"
+                </p>
+                <h3>Maria</h3>
+            </div>
+            <div class="testimonial">
+                <img src="images/usuario2.jpg" alt="Student 2">
+                <p>"I never knew learning a new alphabet could be this simple. Highly recommend this method!"</p>
+                <h3>John</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Margareth Daniela Ramos Discua , La Ceiba, Honduras</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = lastModified;
+    </script>
+
+</body>
+
+</html>

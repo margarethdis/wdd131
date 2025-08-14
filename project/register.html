@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register to Learn Hangul</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css"> 
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+
+    <h1>Register to Learn Hangul</h1>
+
+    <form action="/submit-form" method="POST">
+        <!-- Personal Information Section -->
+        <h3>Personal Information</h3>
+        
+        <label for="fullname">Full Name (Required):</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email Address (Required):</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password (Required):</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm-password">Confirm Password (Required):</label><br>
+        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+        <label for="dob">Date of Birth (Optional):</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <!-- Learning Preferences Section -->
+        <h3>Learning Preferences</h3>
+
+        <label for="level">Hangul Knowledge Level (Optional):</label><br>
+        <select id="level" name="level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select><br><br>
+
+        <label for="motivation">Why do you want to learn Hangul? (Optional):</label><br>
+        <textarea id="motivation" name="motivation"></textarea><br><br>
+
+        <label for="contact-method">Preferred Method of Contact (Optional):</label><br>
+        <input type="radio" id="email-contact" name="contact-method" value="email">
+        <label for="email-contact">Email</label><br>
+        <input type="radio" id="web-contact" name="contact-method" value="web-notifications">
+        <label for="web-contact">Web Notifications</label><br>
+        <input type="radio" id="whatsapp-contact" name="contact-method" value="whatsapp">
+        <label for="whatsapp-contact">WhatsApp</label><br><br>
+
+        <label for="how-heard">How did you hear about this course? (Optional):</label><br>
+        <input type="text" id="how-heard" name="how-heard"><br><br>
+
+        <!-- Rating Section -->
+        <h3>Rate the Website</h3>
+        <label for="rating">Overall Rating:</label>
+        <div id="rating">
+            <input type="radio" id="rating1" name="rating" value="1"> ☆
+            <input type="radio" id="rating2" name="rating" value="2"> ☆☆
+            <input type="radio" id="rating3" name="rating" value="3"> ☆☆☆
+            <input type="radio" id="rating4" name="rating" value="4"> ☆☆☆☆
+            <input type="radio" id="rating5" name="rating" value="5"> ☆☆☆☆☆
+        </div><br><br>
+
+    
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="reviewCount">Number of reviews submitted: 0</p>
+
+    <footer>
+        <p>Margareth Ramos | La Ceiba, Honduras</p>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Display the current year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Display the last modified date
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+    <script src="scripts/register.js"></script>
+</body>
+</html>

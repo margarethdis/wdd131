@@ -1,0 +1,171 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative; /* Para efectos de hover */
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s; /* Suaviza el hover */
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #ffffff;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #218838;
+}
+
+/* Why Learn Hangul Section */
+.why-learn {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background-color: #f1f1f1;
+}
+
+.why-learn .container {
+    display: flex;
+    gap: 20px;
+
+}
+
+.why-learn .left img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.why-learn .right {
+    width: 50%;
+}
+
+.why-learn h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial h3 {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
