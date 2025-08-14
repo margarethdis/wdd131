@@ -1,0 +1,19 @@
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%; /* El formulario ocupa el 90% del ancho */
+        padding: 10px;
+    }
+
+    label {
+        font-size: 14px; /* Ajuste de tamaño de fuente */
+    }
+
+    select, input, textarea, button {
+        font-size: 14px;
+        padding: 8px; /* Ajuste de padding */
+    }
+
+    button {
+        font-size: 18px; /* Asegurarse de que el botón sea fácil de hacer clic */
+    }
+}

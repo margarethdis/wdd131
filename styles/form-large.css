@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00ffcc, #ff00ff); /* Gradiente de neón */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+form {
+    background-color: white;
+    width: 50%;
+    /* 50% del ancho de la pantalla */
+    margin: 20px auto;
+    /* Centrado del formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el tamaño del ancho */
+}
+
+
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+select,
+input,
+textarea,
+button {
+    width: 100%;
+    /* Los campos ocuparán todo el ancho disponible */
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Ajustes para los campos de calificación (radio buttons) */
+#rating input {
+    width: auto;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Ajustes para los checkboxes (características) */
+#features input {
+    width: auto;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Mostrar el contador de reseñas en el pie de página */
+#reviewCount {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Responsive Design: Estilos para pantallas grandes */
+@media screen and (max-width: 1200px) {
+    form {
+        width: 60%;
+        /* Un poco más pequeño para pantallas grandes */
+    }
+}
+
+footer {
+    background-color: #333333; /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer span {
+    font-weight: bold;
+}
