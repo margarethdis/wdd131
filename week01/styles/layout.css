@@ -1,7 +1,88 @@
-*{
-    margin: 0; /*Quita el espacio exterior de los elementos.*/
-    padding: 0;/*Quita el espacio interior de los elementos.*/
-    box-sizing: border-box; /*Hace que el ancho y alto de los elementos incluya el padding y el borde. Yo decido cuanto mide y no se distorciona */
+* {
+    margin: 0;
+    /*Quita el espacio exterior de los elementos.*/
+    padding: 0;
+    /*Quita el espacio interior de los elementos.*/
+    box-sizing: border-box;
+    /*Hace que el ancho y alto de los elementos incluya el padding y el borde. Yo decido cuanto mide y no se distorciona */
 }
 
 /*Lo primero es confrigurar el body como un grid o cuadricula o cajones donde ira cada cosa*/
+
+body {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "aside-left main aside-right"
+        "footer footer footer";
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    /*luego elegimos las que guste*/
+}
+
+header,
+footer,
+main,
+aside {
+    padding: 20px;
+}
+
+/* paso 2 Asignar elemntos a sus areas*/
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.Left-sidebar {
+    grid-area: aside-left;
+    background-color: #466647;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+.Right-sidebar {
+    grid-area: aside-right;
+    background-color: #466647;
+    padding: 1rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*navegacion*/
+nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    /*quitar los puntitos*/
+    padding: 0;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
