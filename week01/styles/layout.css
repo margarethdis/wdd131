@@ -1,0 +1,7 @@
+*{
+    margin: 0; /*Quita el espacio exterior de los elementos.*/
+    padding: 0;/*Quita el espacio interior de los elementos.*/
+    box-sizing: border-box; /*Hace que el ancho y alto de los elementos incluya el padding y el borde. Yo decido cuanto mide y no se distorciona */
+}
+
+/*Lo primero es confrigurar el body como un grid o cuadricula o cajones donde ira cada cosa*/
