@@ -1,0 +1,148 @@
+/* --- Variables de Diseño --- */
+:root {
+    --primary-color: #4a148c; /* Morado profundo del mockup */
+    --secondary-color: #f3f3f3;
+    --accent-color: #ffffff;
+    --font-main: 'Roboto', 'Open Sans', sans-serif;
+}
+
+/* --- Resets Básicos --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: #333;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+/* Ajuste opcional para que el Header no se vea tan pegado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el nav baje a la siguiente línea si es necesario */
+}
+header h1 {
+    font-size: 1.4rem;
+}
+
+/* --- Botón Hamburguesa --- */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/* Iconos usando Pseudo-elementos */
+#menu::before {
+    content: "☰"; /* Icono de hamburguesa */
+}
+
+#menu.open::before {
+    content: "X"; /* Cambia a X cuando está abierto */
+}
+
+/* --- Navegación Móvil (AJUSTADA) --- */
+nav {
+    display: none; /* Sigue oculto por defecto */
+    width: 100%;
+    background-color: var(--primary-color);
+    /* ELIMINAMOS: position: absolute, top, left y z-index */
+    /* Al quitar la posición absoluta, el nav ocupará espacio real en el flujo */
+}
+
+/* Clase que activa el JavaScript */
+nav.show {
+    display: block !important;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.navigation li a:hover {
+    background-color: rgba(255,255,255,0.2);
+    font-weight: bold;
+    color: var(--accent-color); /* O cualquier cambio visual */
+}
+
+/* --- Contenido Principal --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+main h2 {
+    margin: 1.5rem 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+/* --- Grid de Imágenes (Corregido) --- */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+    gap: 25px;
+}
+
+figure {
+    margin: 0;
+    background-color: var(--secondary-color);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    height: 250px; /* Altura fija para evitar espacios en blanco */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}

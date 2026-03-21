@@ -1,0 +1,30 @@
+/* Cambios para pantallas mayores a 768px */
+
+#menu {
+    display: none; /* Escondemos el botón de hamburguesa */
+}
+
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+nav {
+    display: block !important; /* Siempre visible en escritorio */
+    width: auto;
+}
+
+.navigation {
+    display: flex; /* Flexbox para menú horizontal */
+}
+
+.navigation li a {
+    border-top: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Grid de 3 columnas en escritorio */
+.gallery {
+    grid-template-columns: repeat(3, 1fr);
+}

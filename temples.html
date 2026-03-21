@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Dynamic Web Fundamentals - Temple Album</title>
+    <meta name="description" content="Temple Album page for WDD 131 showing a responsive gallery of temples.">    <meta name="author" content="Margareth Ramos">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+<header>
+    <h1>Temple Album</h1>
+    <button id="menu" title="Toggle Menu"></button>
+    <nav id="navbar">
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Old</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Large</a></li>
+            <li><a href="#">Small</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h2>Home</h2>
+        <div class="gallery">
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/9fc6d53550ed3243fb8eca9ebceb284d4865e7db/full/640%2C/0/default" alt="Temple Placeholder 1">
+                <figcaption>San Diego California</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/92c33bcbf9cf85483e008d6871f8ced5f6d7b661/full/640%2C/0/default" alt="Temple Placeholder 2">
+                <figcaption>Salt Lake City Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/d9c313eb96c173d0ad32f21f461ce994129c9e8d/full/500%2C/0/default" alt="Temple Placeholder 3">
+                <figcaption>Manti Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/54ac3388abacb11ef04678697a2fc2b6aa0ac4f5/full/500%2C/0/default" alt="Temple Placeholder 4">
+                <figcaption>Logan Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/215a9dc2298511eeacb9eeeeac1e26338fda42c9/full/500%2C/0/default" alt="Temple Placeholder 5">
+                <figcaption>St. George Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/a2c415301c7991e2e10059b5ec588a28785917b0/full/500%2C/0/default" alt="Temple Placeholder 6">
+                <figcaption>Bern Switzerland</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/2ff304d05520229fae54c290f936ba01b20173e5/full/500%2C/0/default" alt="Temple Placeholder 7">
+                <figcaption>Hamilton New Zealand</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/914ec5701c2435b4cfa50668de85df2aebf68f26/full/500%2C/0/default" alt="Temple Placeholder 8">
+                <figcaption>London England</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.churchofjesuschrist.org/imgs/ebdc56cba8bb11eda23ceeeeac1e7e543b91e9b4/full/500%2C/0/default" alt="Temple Placeholder 9">
+                <figcaption>Cardston Alberta</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Margareth Ramos | San Pedro Sula, Honduras</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
