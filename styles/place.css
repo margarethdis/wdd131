@@ -1,0 +1,84 @@
+/* Variables Globales */
+:root {
+    --primary-color: #005a8d; /* Un azul formal */
+    --secondary-color: #003d5f;
+    --accent-color: #f0f0f0;
+    --text-color: #333;
+    --font-main: 'Arial', sans-serif;
+}
+
+/* Estilos Base (Móvil Primero) */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.weather-icon-mobile {
+    width: 50px;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Media Query para Pantallas Anchas */
+@media (min-width: 800px) {
+    main {
+        grid-template-columns: 2fr 1fr; /* La imagen y datos ocupan más espacio */
+    }
+
+    .hero {
+        grid-column: 1 / -1; /* La imagen hero cruza toda la pantalla arriba */
+    }
+
+    /* Ocultamos el SVG de móvil y usamos pseudo-elemento */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather-heading::after {
+        content: " ⛅"; /* Requisito: Pseudo-elemento con emoticon */
+        margin-left: 10px;
+    }
+}
+
+footer {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}

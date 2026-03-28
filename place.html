@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page: San Pedro Sula, Honduras</title>
+    <meta name="description" content="Assignment for WDD 131: Dynamic Web Fundamentals featuring San Pedro Sula, Honduras.">
+    <meta name="author" content="Margareth Ramos">
+    
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>San Pedro Sula, Honduras</h1>
+    </header>
+
+    <main>
+      <div class="hero">
+    <picture>
+        <source srcset="images/merendon_large.webp" media="(min-width: 800px)">
+        <img src="images/merendon_base.webp" 
+             alt="Vista panorámica del Merendón, San Pedro Sula" 
+             loading="lazy" 
+             width="400" 
+             height="250">
+    </picture>
+</div>
+
+        <section class="data">
+            <h2>Main Data</h2>
+            <ul>
+                <li><strong>Country:</strong> Honduras</li>
+                <li><strong>Founded:</strong> June 27, 1536</li>
+                <li><strong>Population:</strong> ~1.2 Million</li>
+                <li><strong>Nickname:</strong> La Ciudad de los Zorzales</li>
+                <li><strong>Climate:</strong> Tropical</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2 class="weather-heading">Weather</h2>
+            <img src="images/cloudy.png" alt="Weather Icon" class="weather-icon-mobile">
+            <div class="weather-details">
+                <p><strong>Temperature:</strong> <span id="temp">28</span>°C</p>
+                <p><strong>Condition:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind">12</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Margareth Ramos | San Pedro Sula, Honduras</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
