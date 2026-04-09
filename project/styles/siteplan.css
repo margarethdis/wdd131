@@ -1,6 +1,3 @@
-/* --- Fonts Integration --- */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
-
 /* --- Root Variables --- */
 :root {
     --primary-bg: #1e2426;    /* Darker Charcoal */
@@ -138,6 +135,27 @@ li::before {
     background-color: var(--accent-fuchsia);
     color: var(--primary-bg);
     box-shadow: var(--fuchsia-glow);
+}
+
+/* --- Wireframe Image Styling --- */
+figure {
+    margin: 25px 0;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--accent-fuchsia);
+    box-shadow: var(--fuchsia-glow);
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--accent-teal);
+    font-style: italic;
 }
 
 /* --- Footer --- */
