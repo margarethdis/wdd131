@@ -1,0 +1,156 @@
+/* --- Fonts Integration --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* --- Root Variables --- */
+:root {
+    --primary-bg: #1e2426;    /* Darker Charcoal */
+    --card-bg: #2d3436;       /* Deep Charcoal */
+    --accent-teal: #00CEC9;   /* Electric Teal */
+    --accent-fuchsia: #FF00FF;/* Neon Fuchsia */
+    --text-light: #F4F7F6;    /* Off White */
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Lato', sans-serif;
+    
+    /* Neon Glow Effects */
+    --teal-glow: 0 0 10px rgba(0, 206, 201, 0.6);
+    --fuchsia-glow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: var(--body-font);
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1f21;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-teal);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-family: var(--header-font);
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--text-light);
+    text-shadow: var(--teal-glow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--accent-teal);
+}
+
+/* --- Content Layout --- */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--card-bg);
+    margin-bottom: 30px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect with fuchsia neon */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--fuchsia-glow);
+    border-color: var(--accent-fuchsia);
+}
+
+h2 {
+    font-family: var(--header-font);
+    color: var(--accent-teal);
+    margin-top: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(0, 206, 201, 0.2);
+    padding-bottom: 12px;
+}
+
+/* Developer Icon Prefix */
+h2::before {
+    content: "{ } ";
+    margin-right: 12px;
+    font-size: 1.3rem;
+    color: var(--accent-fuchsia);
+}
+
+ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 28px;
+}
+
+/* Custom Bullet Points */
+li::before {
+    content: ">>";
+    color: var(--accent-fuchsia);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+/* --- Color Demo Boxes --- */
+.color-box {
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.primary {
+    background-color: var(--card-bg);
+    color: var(--accent-teal);
+    border: 2px solid var(--accent-teal);
+}
+
+.accent {
+    background-color: var(--accent-teal);
+    color: var(--primary-bg);
+}
+
+.secondary {
+    background-color: var(--accent-fuchsia);
+    color: var(--primary-bg);
+    box-shadow: var(--fuchsia-glow);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #1a1f21;
+    color: var(--accent-teal);
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.7rem; }
+    section { padding: 25px; }
+}
