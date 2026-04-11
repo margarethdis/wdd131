@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    background-color: #d1cbd3;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+header h1 {
+    background-color: #300030;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+label, legend {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"], select, textarea, input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #300030;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}

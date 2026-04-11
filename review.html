@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <main>
+        <h1>Thank you for your review!</h1>
+        <p>Your review has been successfully recorded.</p>
+        <p>Total reviews submitted: <span id="reviewCount"></span></p>
+        <a href="form.html">Submit another review</a>
+    </main>
+
+    <script>
+        // Lógica del contador
+        let count = localStorage.getItem("reviewCounter") || 0;
+        count++;
+        localStorage.setItem("reviewCounter", count);
+        document.getElementById("reviewCount").textContent = count;
+    </script>
+</body>
+</html>
