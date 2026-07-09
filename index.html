@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--aqui asegurarse de colocar: 
-    meta charset, 
-    meta viewport,
-    title,
-    meta description,
-    meta author-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Margareth Daniela Ramos Discua</title>
@@ -16,10 +10,10 @@
     <script src="scripts/getdate.js" defer></script>
 </head>
 <body>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
     <nav>
-        <a href="https://www.linkedin.com" target="_blank">Linkedin</a>
-        <a href="https://byupw.instructure.com/" target="_blank">canvas</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
         <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
         <a href="#">Final Project</a>
     </nav>
@@ -27,40 +21,44 @@
         <h1>Margareth Daniela Ramos Discua</h1>
 
         <div class="grid-container">
+            <section class="card">
+                <h2>About Me</h2>
 
-        <section class="card_1">
-            <h2>About Me</h2>
-            <img src="images/profile.png" alt="Profile Image" width="200" height="200" loading='lazy'>
-            <p>I am a passionate web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy creating dynamic and user-friendly websites.</p>
+                <div class="profile-box">
+                    <img src="images/profile.png" alt="Profile Image" width="200" height="200" loading="lazy">
+                    <p>I am a passionate web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy creating dynamic and user-friendly websites.</p>
+                </div>
 
-            <hr>
+                <hr>
 
-            <h3>La Ceiba, Honduras</h3>
-            <p>Honduras is a beautiful country in Central America, known for its rich culture, amazing coral reefs, and delicious traditional food like baleadas.</p>
-            <figure>
-            <img src="images/flag-honduras.jpg" alt="Official Flag of Honduras" width="150" height="90" loading="lazy">
-            <figcaption>Official Flag of Honduras</figcaption>
-            </figure>
-        </section>
+                <h3>La Ceiba, Honduras</h3>
+                
+                <div class="country-box">
+                    <figure class="flag">
+                        <img src="images/flag-honduras.jpg" alt="Official Flag of Honduras" width="150" height="90" loading="lazy">
+                        <figcaption>Official Flag of Honduras</figcaption>
+                    </figure>
+                    <p>Honduras is a beautiful country in Central America, known for its rich culture, amazing coral reefs, and delicious traditional food like baleadas.</p>
+                </div>
+            </section>
 
-        <section class="card_2">
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
-                <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
-                <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
-                <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
-            </ul>
-        </section>
-        </div> </main>
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                    <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                    <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+                </ul>
+            </section>
+        </div> 
+    </main>
 
-        <footer>
-            <p>&copy;<span id="currentyear"></span> 🌸 Margareth Daniela Ramos Discua 🌸 Honduras</p>
-            <p id="lastModified"></p>
-        </footer>
-
-    
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Margareth Daniela Ramos Discua 🌸 Honduras</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

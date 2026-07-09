@@ -1,41 +1,212 @@
-/*reminder: general to specific
-1.reset general:* limpia todoo
-2.el setup Global:body, h1 (define letras y fondos generales
-3.el grid:.grid-container -crea la estructura o el esqueleto 
-de como se vana acomadar las cosa en al pantalla.
-4.los detalles especificos:.card, header,footer - (clores individuales, bordes sombras y
-detallitos de cada caja.*/
+/* reminder: general to specific
+1.reset general: limpia todo
+2.el setup Global: body, h1, #course-title
+3.el menú global y la estructura: nav, .grid-container
+4.los detalles especificos: .card, .profile-box, .country-box, footer
+*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* 1. CONFIGURACIÓN GENERAL / RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* General Styles */
-body{
+/* 2. SETUP GLOBAL */
+body {
     font-family: Arial, sans-serif;
     background-color: #eaedf1;
+    color: #333333;
 }
 
-/*el titulo grande*/
-h1{
+/* Franja superior del título del curso */
+#course-title {
+    display: block;
+    background-color: #2f547c; /* El azul acero del diseño de muestra */
+    color: #ffffff;
     text-align: center;
-    margin:40px 0;
+    padding: 12px 0;
+    font-size: 1.1rem;
+}
+
+/* El título grande de tu nombre */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #1a1a1a;
+    font-weight: normal;
+}
+
+/* 3. LA BARRA DE NAVEGACIÓN (Menú gris oscuro) */
+nav {
+    background-color: #333333; /* Gris oscuro del diseño */
+    padding: 12px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #aeaeae; /* Cambia a gris claro al pasar el cursor */
+}
+
+/* 4. EL CONTENEDOR GRID (Dos columnas iguales) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+/* 5. TARJETAS INDIVIDUALES */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cdd5df;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil de la muestra */
+    overflow: hidden; /* Asegura que el h2 no se salga de las esquinas redondeadas */
+}
+
+/* 6. LOS TÍTULOS DENTRO DE LAS TARJETAS */
+.card h2 {
+    background-color: #1b4d79; /* Azul medio del encabezado de tarjeta */
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* 6.1 ESPACIADO DEL CONTENIDO INTERNO */
+.card .profile-box,
+.card h3,
+.card .country-box,
+.card ul,
+.card hr {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.card hr {
+    border: 0;
+    border-top: 1px solid #dcdcdc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
     color: #1a1a1a;
 }
 
-/*4. el contenedor grid (el esqueleto de las tarjetas)*/
-.grid-container{
-    display:grid; /*aqui estoy activndo el sistema de rejillas*/
-    grid-template-columns: repeat(auto-fit,minmax(320px, 1fr)); /*la regla magica responsiva*/
-    gap:20px;/*separa las tarjetas entre si por 20pixeles*/
-    max-width:1200px;/*evitara que las tarjetas se extiendan más allá de 1200px*/
-    margin:0 auto;/*centra todo el bloque de las tarjetas en mi pantalla*/
-    padding:0 20px;/*deja un espacio de colchon a los lados en pantallas chicas*/
-
+/* 7. ALINEACIÓN DE LA FOTO DE PERFIL (Texto izquierda, Foto derecha) */
+.profile-box {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
 }
 
+.profile-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
 
+.profile-box img {
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #cccccc;
+}
 
+/* 7.5 ALINEACIÓN DE LA BANDERA (Bandera izquierda, Texto derecha) */
+.country-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+}
 
+.country-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 120px;
+}
+
+.flag img {
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #cccccc;
+}
+
+.flag figcaption {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #666666;
+    margin-top: 5px;
+}
+
+/* 8. ESTILO PARA LOS ENLACES (Web Dev Resources) */
+.card ul {
+    list-style-type: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.card li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+}
+
+/* Añade el puntito personalizado de la lista */
+.card li::before {
+    content: "•";
+    color: #1b4d79;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card a {
+    color: #21409a; /* Azul clásico para los enlaces */
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.card a:hover {
+    color: #000000;
+}
+
+/* 9. EL PIE DE LA PÁGINA (FOOTER) */
+footer {
+    background-color: #1b4d79; /* El mismo azul de los h2 */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+footer p {
+    margin: 0;
+}
