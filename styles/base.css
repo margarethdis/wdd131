@@ -15,7 +15,7 @@ detallitos de cada caja.*/
 /* General Styles */
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+    background-color: #eaedf1;
 }
 
 /*el titulo grande*/
@@ -24,5 +24,18 @@ h1{
     margin:40px 0;
     color: #1a1a1a;
 }
+
+/*4. el contenedor grid (el esqueleto de las tarjetas)*/
+.grid-container{
+    display:grid; /*aqui estoy activndo el sistema de rejillas*/
+    grid-template-columns: repeat(auto-fit,minmax(320px, 1fr)); /*la regla magica responsiva*/
+    gap:20px;/*separa las tarjetas entre si por 20pixeles*/
+    max-width:1200px;/*evitara que las tarjetas se extiendan más allá de 1200px*/
+    margin:0 auto;/*centra todo el bloque de las tarjetas en mi pantalla*/
+    padding:0 20px;/*deja un espacio de colchon a los lados en pantallas chicas*/
+
+}
+
+
 
 
