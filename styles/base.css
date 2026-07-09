@@ -1,0 +1,21 @@
+/*reminder: general to specific
+1.reset general:* limpia todoo
+2.el setup Global:body, h1 (define letras y fondos generales
+3.el grid:.grid-container -crea la estructura o el esqueleto 
+de como se vana acomadar las cosa en al pantalla.
+4.los detalles especificos:.card, header,footer - (clores individuales, bordes sombras y
+detallitos de cada caja.*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* General Styles */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+
