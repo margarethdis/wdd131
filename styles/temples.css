@@ -1,0 +1,167 @@
+/* ===== Variables de diseño ===== */
+:root {
+  --color-bg: #faf7f2;
+  --color-surface: #ffffff;
+  --color-primary: #1b2a4a;
+  --color-primary-light: #2f4270;
+  --color-accent: #b08d57;
+  --color-text: #2b2620;
+  --color-text-muted: #6b6459;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --radius: 6px;
+  --transition: 0.25s ease;
+}
+
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Botón hamburguesa (solo visible en móvil) */
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: var(--color-bg);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+/* ===== Navegación (mobile-first) ===== */
+.main-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  z-index: 10;
+}
+
+.main-nav.is-open {
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav li {
+  border-top: 1px solid rgba(250, 247, 242, 0.15);
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* ===== Main ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+main h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+/* ===== Grid de templos (1 columna en móvil) ===== */
+.temple-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+.temple-grid figure {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(27, 42, 74, 0.1);
+  transition: transform var(--transition);
+}
+
+.temple-grid figure:hover {
+  transform: translateY(-4px);
+}
+
+.temple-grid figcaption {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  padding: 0.85rem 0.5rem;
+  border-top: 3px solid var(--color-accent);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.site-footer p + p {
+  margin-top: 0.35rem;
+  color: rgba(250, 247, 242, 0.75);
+}
