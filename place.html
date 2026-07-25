@@ -3,57 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>South Korea | My Favorite Place</title>
-  <meta name="description" content="Informational page about South Korea: weather, culture, and facts.">
-  <link rel="stylesheet" href="styles/place-base.css">
-  <link rel="stylesheet" href="styles/place-desktop.css">
+  <title>South Korea | Place Page</title>
+  <meta name="description" content="WDD 131 - Informational page about South Korea featuring weather and location data.">
+  <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
 
   <header>
     <h1>South Korea</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="temples.html">Temples</a></li>
-        <li><a href="place.html">Place</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <div class="hero">
       <picture>
-        <source media="(min-width: 800px)" srcset="images/korea-hero-large.webp">
-        <source media="(min-width: 500px)" srcset="images/korea-hero-medium.webp">
-        <img src="images/korea-hero-small.webp" alt="Gyeongbokgung Palace in Seoul, South Korea" loading="lazy">
+        <source media="(min-width: 800px)" srcset="images/palace-daejung.webp">
+        <source media="(min-width: 500px)" srcset="images/palace-daejung.webp">
+        <img src="images/palace-daejung.webp" alt="Gyeongbokgung Palace in Seoul, South Korea" loading="lazy">
       </picture>
-      <h2>Welcome to South Korea</h2>
-    </section>
 
-    <section class="weather">
-      <h2>Weather</h2>
-      <p class="location">Seoul</p>
-      <p class="current-temp">5°C</p>
-      <p class="wind">Wind: 12 km/h</p>
-      <p class="windchill">Wind Chill: <span id="windchill-output">--</span></p>
-      <img class="weather-icon-mobile" src="images/weather-icon.svg" alt="Weather icon" width="40" height="40">
-    </section>
+      <!-- Seccion Data -->
+      <section class="card data-card">
+        <h2>Data</h2>
+        <ul>
+          <li><span class="label">Area:</span> <span class="value">100,210 sq km</span></li>
+          <li><span class="label">Population:</span> <span class="value">~51 million</span></li>
+          <li><span class="label">Capital:</span> <span class="value">Seoul</span></li>
+          <li><span class="label">Language:</span> <span class="value">Korean</span></li>
+          <li><span class="label">Currency:</span> <span class="value">South Korean Won (₩)</span></li>
+          <li><span class="label">Time Zone:</span> <span class="value">UTC+9</span></li>
+        </ul>
+      </section>
 
-    <section class="info">
-      <h2>Facts about this place</h2>
-      <ul>
-        <li>Capital: Seoul</li>
-        <li>Language: Korean</li>
-        <li>Population: ~51 million</li>
-        <li>Currency: South Korean Won (₩)</li>
-      </ul>
-    </section>
+      <!-- Seccion Weather -->
+      <section class="card weather-card">
+        <div class="weather-header">
+          <h2>Weather</h2>
+          <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon-mobile">
+        </div>
+        <ul>
+          <li><span class="label">Temperature:</span> <span class="value">5°C</span></li>
+          <li><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></li>
+          <li><span class="label">Wind:</span> <span class="value">12 km/h</span></li>
+          <li><span class="label">Wind Chill:</span> <span class="value" id="windchill-output">--</span></li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Margareth Ramos - WDD 131</p>
+    <p>&copy; <span id="year"></span> Margareth Ramos - Honduras</p>
     <p>Last modified: <span id="lastModified"></span></p>
   </footer>
 
