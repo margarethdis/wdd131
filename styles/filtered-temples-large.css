@@ -1,0 +1,58 @@
+/* ===== Vista grande (tablet / escritorio) ===== */
+@media (min-width: 700px) {
+
+  .site-header {
+    padding: 1.25rem 2.5rem;
+  }
+
+  .site-title {
+    font-size: 1.85rem;
+  }
+
+  /* Ocultar el botón hamburguesa: ya no se necesita */
+  .hamburger-btn {
+    display: none;
+  }
+
+  /* La navegación vuelve a su lugar normal, en fila, con Flex */
+  .main-nav {
+    display: block;
+    position: static;
+    background-color: transparent;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .main-nav li {
+    border-top: none;
+  }
+
+  .main-nav a {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+  }
+
+  main {
+    padding: 3rem 2.5rem 4rem;
+  }
+
+  main h1 {
+    font-size: 2.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Grid responsivo: tantas columnas como quepan, mínimo 280px cada una */
+  .temple-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.25rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  main h1 {
+    font-size: 3rem;
+  }
+}

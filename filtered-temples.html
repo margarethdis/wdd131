@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album | Margareth Ramos</title>
+  <meta name="description" content="Photo album of temples, filterable by age and size.">
+  <meta name="author" content="Margareth Daniela Ramos Discua">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS: mobile-first first, then large -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="site-title">Temple Album</p>
+
+    <button id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li><a href="#" data-filter="home">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temples Around the World</h1>
+
+    <div id="temple-grid" class="temple-grid">
+      <!-- Temple cards are dynamically generated here with JavaScript -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Margareth Daniela Ramos Discua | WDD 131</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
