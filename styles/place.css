@@ -166,13 +166,13 @@ main {
     left: 2rem;
   }
 
-  /* Tarjeta de clima superpuesta a la derecha */
+  
   .weather-card {
     bottom: 2rem;
     right: 2rem;
   }
 
-  /* Ocultar el icono SVG en vista amplia y usar pseudo-elemento */
+
   .weather-icon-mobile {
     display: none;
   }
