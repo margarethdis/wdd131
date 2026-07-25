@@ -1,4 +1,4 @@
-/* ===== Variables de diseño ===== */
+/* ===== Design variables ===== */
 :root {
   --color-bg: #faf7f2;
   --color-surface: #ffffff;
@@ -15,7 +15,7 @@
   --transition: 0.25s ease;
 }
 
-/* ===== Reset básico ===== */
+/* ===== Basic reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -57,7 +57,7 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Botón hamburguesa (solo visible en móvil) */
+/* Hamburger button (mobile only) */
 .hamburger-btn {
   background: none;
   border: none;
@@ -68,7 +68,7 @@ a {
   padding: 0.25rem 0.5rem;
 }
 
-/* ===== Navegación (mobile-first) ===== */
+/* ===== Navigation (mobile-first) ===== */
 .main-nav {
   display: none;
   position: absolute;
@@ -129,7 +129,7 @@ main h1 {
   margin-bottom: 1.75rem;
 }
 
-/* ===== Grid de templos (1 columna en móvil) ===== */
+/* ===== Temple grid (1 column on mobile) ===== */
 .temple-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -146,6 +146,13 @@ main h1 {
 
 .temple-grid figure:hover {
   transform: translateY(-4px);
+}
+
+.temple-grid img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .temple-grid figcaption {
@@ -167,7 +174,7 @@ main h1 {
   line-height: 1.4;
 }
 
-/* ===== Barra de filtro activo (opcional, mejora de UX) ===== */
+/* ===== Active filter label (optional UX touch) ===== */
 .active-filter {
   text-align: center;
   font-family: var(--font-display);

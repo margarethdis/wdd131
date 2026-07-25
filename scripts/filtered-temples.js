@@ -98,8 +98,6 @@ function displayTemples(templeArray) {
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
     img.loading = 'lazy';
-    img.width = 500;
-    img.height = 313;
 
     const figcaption = document.createElement('figcaption');
     figcaption.innerHTML = `
