@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Korea | My Favorite Place</title>
+  <meta name="description" content="Informational page about South Korea: weather, culture, and facts.">
+  <link rel="stylesheet" href="styles/place-base.css">
+  <link rel="stylesheet" href="styles/place-desktop.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>South Korea</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="temples.html">Temples</a></li>
+        <li><a href="place.html">Place</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/korea-hero-large.webp">
+        <source media="(min-width: 500px)" srcset="images/korea-hero-medium.webp">
+        <img src="images/korea-hero-small.webp" alt="Gyeongbokgung Palace in Seoul, South Korea" loading="lazy">
+      </picture>
+      <h2>Welcome to South Korea</h2>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <p class="location">Seoul</p>
+      <p class="current-temp">5°C</p>
+      <p class="wind">Wind: 12 km/h</p>
+      <p class="windchill">Wind Chill: <span id="windchill-output">--</span></p>
+      <img class="weather-icon-mobile" src="images/weather-icon.svg" alt="Weather icon" width="40" height="40">
+    </section>
+
+    <section class="info">
+      <h2>Facts about this place</h2>
+      <ul>
+        <li>Capital: Seoul</li>
+        <li>Language: Korean</li>
+        <li>Population: ~51 million</li>
+        <li>Currency: South Korean Won (₩)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Margareth Ramos - WDD 131</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>

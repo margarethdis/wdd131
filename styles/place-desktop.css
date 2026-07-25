@@ -1,0 +1,34 @@
+@media (min-width: 800px) {
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  /* Ocultamos el SVG móvil en pantalla ancha */
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  /* Pseudo-elemento con emoji, solo visible en vista amplia */
+  .weather h2::after {
+    content: " ⛅";
+  }
+
+  .weather {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .info {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+}
