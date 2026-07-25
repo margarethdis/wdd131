@@ -1,6 +1,4 @@
-/* ===================================================
-   1. GLOBAL VARIABLES & RESET
-   =================================================== */
+/*1. GLOBAL VARIABLES & RESET*/
 :root {
   --primary-color: #003478;   /* Taegeuk Blue */
   --secondary-color: #c60c30; /* Taegeuk Red */
@@ -35,12 +33,10 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden; /* evita el scroll de toda la página */
+  overflow: hidden;
 }
 
-/* ===================================================
-   2. HEADER & FOOTER
-   =================================================== */
+/*2. HEADER & FOOTER */
 header {
   background-color: var(--primary-color);
   color: white;
@@ -58,15 +54,13 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===================================================
-   3. MOBILE-FIRST (ESTRUCTURA VERTICAL)
-   =================================================== */
+/* 3. MOBILE-FIRST */
 main {
   flex: 1;
-  min-height: 0; /* clave para que flex-child con overflow funcione */
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* en móvil, si no cabe todo, scrollea solo aquí */
+  overflow-y: auto;
 }
 
 .hero {
@@ -130,12 +124,10 @@ main {
   font-weight: bold;
 }
 
-/* ===================================================
-   4. DESKTOP VIEW (MIN-WIDTH: 800PX)
-   =================================================== */
+/* 4. DESKTOP VIEW (MIN-WIDTH: 800PX)*/
 @media (min-width: 800px) {
   main {
-    overflow: hidden; /* en desktop no debería hacer falta scroll */
+    overflow: hidden; 
   }
 
   .hero {
