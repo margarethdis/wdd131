@@ -1,0 +1,281 @@
+
+Siteplan · CSS
+:root {
+  --paper: #faf3e6;
+  --paper-dim: #f2e8d5;
+  --ink: #1c2b39;
+  --ink-soft: #33475c;
+  --stamp-red: #b23a2e;
+  --stamp-gold: #c79a3e;
+  --text: #33302a;
+  --line: #d8cbb0;
+ 
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+}
+ 
+* { box-sizing: border-box; }
+ 
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(var(--line) 0.6px, transparent 0.6px);
+  background-size: 22px 22px;
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+ 
+a { color: var(--stamp-red); }
+ 
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+ 
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 3px double var(--ink);
+  padding: 2.5rem 0 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+ 
+.eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+ 
+.site-header h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 0.3rem 0 0.4rem;
+  color: var(--ink);
+}
+ 
+.site-header p.tagline {
+  font-style: italic;
+  font-family: var(--font-display);
+  color: var(--ink-soft);
+  margin: 0;
+}
+ 
+/* ---------- Stamp badge (signature element) ---------- */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  border: 2px dashed var(--stamp-red);
+  color: var(--stamp-red);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.05rem;
+  transform: rotate(-8deg);
+  flex-shrink: 0;
+  background: var(--paper);
+}
+ 
+.stamp.gold {
+  border-color: var(--stamp-gold);
+  color: var(--stamp-gold);
+  transform: rotate(6deg);
+}
+ 
+/* ---------- Sections ---------- */
+section {
+  margin-bottom: 3rem;
+}
+ 
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+ 
+.section-head h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0;
+}
+ 
+.card {
+  background: var(--paper-dim);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.5rem 1.8rem;
+}
+ 
+/* ---------- Scenarios ---------- */
+.scenario-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+ 
+.scenario-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--paper-dim);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+}
+ 
+.scenario-list .stamp {
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 0.85rem;
+}
+ 
+/* ---------- Color schema ---------- */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+ 
+.swatch {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper);
+}
+ 
+.swatch-color {
+  height: 70px;
+}
+ 
+.swatch-info {
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+ 
+.swatch-info strong {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+ 
+/* ---------- Typography ---------- */
+.type-sample {
+  border-bottom: 1px solid var(--line);
+  padding: 1.1rem 0;
+}
+ 
+.type-sample:last-child { border-bottom: none; }
+ 
+.type-sample .label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-bottom: 0.3rem;
+}
+ 
+.type-sample .display-sample {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--ink);
+}
+ 
+.type-sample .body-sample {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+ 
+.type-sample .mono-sample {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--stamp-red);
+}
+ 
+/* ---------- Wireframes ---------- */
+.wireframes {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+ 
+.frame-label {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+ 
+.frame {
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.5rem;
+}
+ 
+.frame.mobile { width: 200px; }
+.frame.desktop { width: 460px; }
+ 
+.wf-block {
+  border: 1.5px dashed #9aa3ab;
+  color: #6a7178;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  margin-bottom: 0.35rem;
+  border-radius: 3px;
+}
+ 
+.wf-header { height: 30px; }
+.wf-hero { height: 70px; }
+.wf-nav { height: 20px; }
+.wf-row { display: flex; gap: 0.35rem; }
+.wf-row .wf-block { flex: 1; margin-bottom: 0; }
+.wf-card { height: 60px; }
+.wf-sidebar { height: 130px; }
+.wf-footer { height: 26px; margin-bottom: 0; }
+ 
+.desktop .wf-row { margin-bottom: 0.35rem; }
+.desktop .wf-hero { height: 90px; }
+.desktop .wf-card { height: 90px; }
+.desktop .wf-sidebar { height: 195px; }
+ 
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem; 
+  color: var(--ink-soft);
+}
+ 
