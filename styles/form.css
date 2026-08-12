@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #003366;
+  --accent-color: #8b5a2b; /* Contraste AA verificado para Lighthouse */
+  --bg-color: #f4f6f8;
+  --text-color: #222222;
+  --border-color: #767676;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.2rem 1rem;
+}
+
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 550px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+  margin-bottom: 1.2rem;
+}
+
+label, legend {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.req {
+  color: #d9534f;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.check-label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+/* Rating por estrellas */
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 2.2rem;
+  color: var(--border-color);
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 0 0.2rem;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+  color: var(--accent-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #002244;
+}
+
+/* Página de confirmación */
+.confirmation {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.counter-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}

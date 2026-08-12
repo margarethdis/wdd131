@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted | WDD 131</title>
+  <meta name="description" content="Confirmation page for the product review submission.">
+  <meta name="author" content="Margareth Ramos">
+  <link rel="stylesheet" href="styles/form.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Contador de reseñas con localStorage
+      let count = Number(localStorage.getItem("reviewCounter")) || 0;
+      count++;
+      localStorage.setItem("reviewCounter", count);
+
+      const reviewDisplay = document.querySelector("#review-count");
+      if (reviewDisplay) {
+        reviewDisplay.textContent = count;
+      }
+
+      // Información del Footer
+      document.querySelector("#currentyear").textContent = new Date().getFullYear();
+      document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Product Review Submitted</h1>
+  </header>
+
+  <main class="confirmation">
+    <h2>Thank You!</h2>
+    <p>Your product review has been recorded successfully.</p>
+    <p class="counter-text">Total reviews submitted on this browser: <strong id="review-count">0</strong></p>
+    
+    <a href="form.html" class="back-link">Submit Another Review</a>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Margareth Ramos | Honduras</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
