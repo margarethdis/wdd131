@@ -29,17 +29,15 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
   const selectElement = document.querySelector("#prod-name");
 
-  // Poblar las opciones del Select dinámicamente
   if (selectElement) {
     products.forEach((product) => {
       const option = document.createElement("option");
-      option.value = product.id; // Cumple con el criterio 5 (usar id en el value)
+      option.value = product.id;
       option.textContent = capitalizeWords(product.name);
       selectElement.appendChild(option);
     });
   }
 
-  // Actualizar fechas en el footer
   const yearSpan = document.querySelector("#currentyear");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
@@ -51,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Función para capitalizar el texto de las opciones
 function capitalizeWords(str) {
   return str
     .split(" ")

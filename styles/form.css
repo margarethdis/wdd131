@@ -1,6 +1,6 @@
 :root {
   --primary-color: #003366;
-  --accent-color: #8b5a2b; /* Contraste AA verificado para Lighthouse */
+  --accent-color: #8b5a2b;
   --bg-color: #f4f6f8;
   --text-color: #222222;
   --border-color: #767676;
@@ -37,7 +37,7 @@ main {
   background: #ffffff;
   padding: 1.8rem;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px #0000001a;
 }
 
 .form-item {
@@ -71,10 +71,16 @@ fieldset {
   border-radius: 4px;
 }
 
-.check-label {
-  display: block;
-  font-weight: normal;
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 0.4rem;
+}
+
+.checkbox-item label {
+  font-weight: normal;
+  margin-bottom: 0;
   cursor: pointer;
 }
 
@@ -136,4 +142,15 @@ fieldset {
   color: var(--primary-color);
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* Media Query para vista Desktop (Requerida por la auditoría) */
+@media (min-width: 600px) {
+  main {
+    padding: 2.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
 }
