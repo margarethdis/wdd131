@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo estilo sello rectangular redondeado -->
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="#FAF3E6" stroke="#1C2B39" stroke-width="3" />
+  
+  <!-- Círculo punteado de sello postal -->
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#B23A2E" stroke-width="2" stroke-dasharray="4 3" />
+  
+  <!-- Estrella de brújula / rosa de los vientos de navegación -->
+  <path d="M32 16 L35 28 L47 32 L35 36 L32 48 L29 36 L17 32 L29 28 Z" fill="#B23A2E" />
+  <path d="M32 20 L34 29 L43 32 L34 35 L32 44 L30 35 L21 32 L30 29 Z" fill="#C79A3E" />
+  
+  <!-- Centro -->
+  <circle cx="32" cy="32" r="3" fill="#FAF3E6" />
+</svg>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Camino a Políglota - Documenting my journey learning English, French, Japanese, and Italian.">
+  <title>Camino a Políglota | Home</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Google Fonts: Fraunces, Work Sans, IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=IBM+Plex+Mono:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/languages.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="Camino a Políglota Logo" class="site-logo" width="220" height="42">
+      </a>
+      <button id="menu-btn" aria-label="Toggle navigation menu">☰</button>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="languages.html">Languages & Methods</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="stamp-tag">PASSPORT OF PROGRESS</span>
+        <h1>One language at a time, one step closer to fluency</h1>
+        <p>Documenting my personal journey learning English, French, Japanese, and Italian simultaneously.</p>
+      </div>
+      <img src="images/lan.png" alt="Language learning journal and passport on a wooden desk" loading="lazy" width="600" height="400">
+    </section>
+
+    <section class="recent-posts">
+      <h2>Recent Progress Log</h2>
+      <div id="posts-container" class="grid-layout">
+        <!-- Dynamic content rendered via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Camino a Políglota · Margareth Ramos</p>
+    <p><a href="references.html">Resource & Image References</a></p>
+  </footer>
+</body>
+</html>
